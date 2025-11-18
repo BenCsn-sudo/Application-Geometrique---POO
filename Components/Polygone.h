@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include "Figure.h"
 
 class Polygone : public Figure {
 //On utilise protected ici car on veut que les points soit modifiables par les sous classes

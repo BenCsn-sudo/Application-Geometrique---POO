@@ -1,9 +1,9 @@
 # Compilateur
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -I./ -Icomponents -Iservices -IIhm
+CXXFLAGS = -std=c++17 -Wall -Wextra -I./ -IComponents -IService -IIhm
 
-# Dossiers
-SRC_DIRS = . components services Ihm
+# Dossiers (attention à la casse)
+SRC_DIRS = . Components Service Ihm
 SRC = $(foreach dir, $(SRC_DIRS), $(wildcard $(dir)/*.cpp))
 
 # Fichiers objets
@@ -15,18 +15,14 @@ SFML = -lsfml-graphics -lsfml-window -lsfml-system
 # Nom de l'exécutable
 TARGET = app
 
-# Règle par défaut
 all: $(TARGET)
 
-# Compilation de l'exécutable
 $(TARGET): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(SFML)
 
-# Compilation des .o
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Nettoyage
 clean:
 	rm -f $(OBJ)
 

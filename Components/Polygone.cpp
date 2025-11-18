@@ -6,17 +6,17 @@ const std::vector<sf::Vector2f>& Polygone::getPoints() const {
 }
 
 // Fonction de dessin
-void Polygone::draw(sf::RenderWindow& window) const override {
+void Polygone::draw(sf::RenderWindow& window) const {
 
 	// Forme SFML pour avoir N sommets
 	sf::ConvexShape shape;
 
 	// On lui dit combien il y à de sommets
-	shape.setPointCount(points.size())
+	shape.setPointCount(points.size());
 
 	// On copie chaque sommet du vector dans l'objet graphique
 	for (size_t i = 0; i < points.size(); i++) {
-		shape.setPoint(i, point[i]);
+		shape.setPoint(i, points[i]);
 	}
 
 	// Style visuel
