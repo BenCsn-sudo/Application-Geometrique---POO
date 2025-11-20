@@ -1,4 +1,5 @@
 # 🟦 **README — Application de Figures Géométriques en C++ / SFML**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📌 Présentation
 
